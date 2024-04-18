@@ -13,16 +13,18 @@ The script is not RouterOS license dependant, it just queries information from t
 This script will get the Signal-to-Noise (S/N) ratio information from a selected wireless interface
 and turn it to an audible tone out of the Routerboard mounted beeper.
 The S/N level is updated once a second, so that this tool can be used to adjust the antenna to
-the find the maximum signal and S/N. Higher the tone, better the signal.
+the maximum signal and S/N. Higher the tone, better the signal.
 
-The signal alignment tones use a fundamental frequency of 500Hz by default and the S/N value 
-(something between 0 and 70dB maybe) is added and multiplied with 20 on top of the 500Hz to make
-the changes more easily detectable. 1dB change in the S/N will therefore result in 20Hz change in the tone.
+The signal alignment tones use a fundamental frequency of 500 Hz by default and the S/N value 
+(something between 0 and 70dB maybe) is added and multiplied with 20 on top of the 500 Hz to make
+the changes more easily detectable. 1 dB change in the S/N will therefore result in 20 Hz change in the tone.
 The best scale depends on your hearing :) 
 
 To enable this script at boot time, you need to add a scheduler to launch the script like this:
+```
 /system/scheduler/add name="Start_Signal-Alignment-Beeper_at_boot" \ 
 interval=0 start-time=startup on-event=":delay 20s;\r\n/system script run Signal-Alignment-Beeper"
+```
 
 ### Beebs and boobs
 The script outputs several tones and melodies:

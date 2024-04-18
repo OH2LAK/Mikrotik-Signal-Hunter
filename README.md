@@ -1,12 +1,11 @@
 # Mikrotik signal hunter 'Signal-Alignment-Beeper'
-Erik Finskas 2024 <erik@finskas.net>
-Version 18042024
+Erik Finskas 2024 <erik@finskas.net
 
 ### Requirements
 A Mikrotik router which has a beeper
 
 ### Why
-This script is mainly targeted for PtP link installation to help aiming the antenna towards the AP or bridge party
+This script is mainly targeted for PtP link installation to help aiming the antenna towards the AP or bridge party.
 The script is not RouterOS license dependant, it just queries information from the wifi interface.
 
 ### How
@@ -20,11 +19,12 @@ The signal alignment tones use a fundamental frequency of 500 Hz by default and 
 the changes more easily detectable. 1 dB change in the S/N will therefore result in 20 Hz change in the tone.
 The best scale depends on your hearing :) 
 
-To enable this script at boot time, you need to add a scheduler to launch the script like this:
-```
-/system/scheduler/add name="Start_Signal-Alignment-Beeper_at_boot" \ 
-interval=0 start-time=startup on-event=":delay 20s;\r\n/system script run Signal-Alignment-Beeper"
-```
+> [!TIP]
+> To enable this script at boot time, you need to add a scheduler to launch the script like this:
+> ```
+> /system/scheduler/add name="Start_Signal-Alignment-Beeper_at_boot" \
+> interval=0 start-time=startup on-event=":delay 20s;\r\n/system script run Signal-Alignment-Beeper"
+> ```
 
 ### Beebs and boobs
 The script outputs several tones and melodies:

@@ -28,12 +28,12 @@ interval=0 start-time=startup on-event=":delay 20s;\r\n/system script run Signal
 
 ### Beebs and boobs
 The script outputs several tones and melodies:
-* Script startup: raising ti-di-dit melody.
-* Connected: raising ti-dit melody (When connection to AP is established)
-* Disconnected: descending ti-dat melody (When connection to AP is lost)
-* Waiting to connect to AP: raising tii-ti-diiii melody
-* Unknown error: raising tii-duu-diiiii melody (This occurs when the script can't get anything reasonable out of the wifi interface)
-* Script end: descending ti-di-dat melody
+* Script startup: raising <sub>ti</sub>-di-<sup>dit</sup> melody.
+* Connected: raising ti-<sup>dit</sup> melody (When connection to AP is established)
+* Disconnected: descending ti-<sub>dat</sub> melody (When connection to AP is lost)
+* Waiting to connect to AP: raising tii-ti-<sup>diii</sup> melody
+* Unknown error: raising <sub>tii</sub>-duu-<sup>diii</sup> melody (This occurs when the script can't get anything reasonable out of the wifi interface)
+* Script end: descending <sup>ti</sup>-di-<sub>dat</sub> melody
 * Boobs:（。 ㅅ 。）
 
 ### Disclaimer

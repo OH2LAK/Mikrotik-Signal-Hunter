@@ -2,6 +2,9 @@
 Erik Finskas 2024 <erik@finskas.net>
 Version 18042024
 
+### Requirements
+A Mikrotik router which has a beeper
+
 ### Why
 This script is mainly targeted for PtP link installation to help aiming the antenna towards the AP or bridge party
 The script is not RouterOS license dependant, it just queries information from the wifi interface.
